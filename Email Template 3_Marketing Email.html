@@ -1,0 +1,305 @@
+
+ <!--
+%%[
+/* Email_Template_2 */
+
+var @headerLogo, @cartLogo, @headerBackgroundColor, @headerTheme, @shoppingcart
+set @headerBackgroundColor = "#D5E9E4" /* set BACKGROUNDCOLOR */
+set @headerTheme = "DARK" /* set LIGHT OR DARK */
+set @shoppingcart = "Y" /* Y OR N */
+
+/* UTM tagging */
+set @utm = "utm_source=PL&utm_medium=EM&utm_campaign=Placeholder"
+
+set @subjectline = "Subject line"
+set @preheader = "Preheader"
+
+SET @HeroImageLink = concat("https://placehold.co/, "?", @utm, "&utm_content=HeroImageLink")
+SET @HeroCTALink = concat("https://placehold.co/", "?", @utm, "&utm_content=HeroCTALink")
+SET @BannerImageLink = concat("https://placehold.co/", "?", @utm, "&utm_content=BannerImageLink")
+SET @BannerCTALink = concat("https://placehold.co/", "?", @utm, "&utm_content=BannerCTALink")
+
+set @legalfineprint = "&sup1;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>
+&sup2;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+"
+]%% -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=414, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- Font Import -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <title>%%=v(@subjectline)=%%</title>
+  <style type="text/css" media="screen">
+    /* Font  Styles */
+    body,
+    p,
+    h1,
+    h2,
+    span {
+      font-family: "Roboto", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    strong {
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Body Styles */
+    body {
+      padding: 0 !important;
+      margin: 0 !important;
+      display: block !important;
+      min-width: 100% !important;
+      width: 100% !important;
+      background: #f5f5f5;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    h1,
+    h2 {
+      margin: 0px !important;
+    }
+
+    /* Mobile styles */
+    @media only screen and (max-device-width: 414px),
+    only screen and (max-width: 500px) {
+
+      /* Header CSS*/
+      .mobile-shell {
+        width: 414px !important;
+        min-width: 414px !important;
+      }
+
+      .hidden {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+        min-height: 0 !important;
+      }
+
+      .no-mobile {
+        text-indent: -99999em;
+        display: none !important;
+      }
+
+      .mobile-only {
+        text-indent: 0 !important;
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        visibility: visible !important;
+        overflow: visible !important;
+        max-height: none !important;
+      }
+
+      /* Template CSS*/
+      .mob-btn-CTA {
+        padding: 11px 33px !important;
+      }
+
+      .hero-title-1 {
+        padding: 50px 50px 0px 50px !important;
+      }
+
+      .hero-title-1-text {
+        font-size: 26px !important;
+        line-height: 34px !important;
+        letter-spacing: .13px !important;
+      }
+
+      .hero-title-2 {
+        font-size: 18px !important;
+        line-height: 28px !important;
+        padding: 15px 50px 0px !important;
+      }
+
+      .hero-title-2-text {
+        font-size: 18px !important;
+        line-height: 28px !important;
+      }
+    }
+
+    /* End Mobile styles */
+  </style>
+  <!--[if mso]>
+<style type="text/css">
+body, table, td, h1, p, span, strong, a {font-family: Arial, Helvetica, sans-serif !important;}
+</style>
+<![endif]-->
+</head>
+
+<body style="padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#f5f5f5; -webkit-text-size-adjust:none;">
+  <!-- MOBILE PREHEADER PUSH ANY CONTENT AFTER THE PREHEADER FROM SHOWING UP INSERT UNDER BODY TAG -->
+  <div style="display: none; max-height: 0px; overflow: hidden;"> %%=v(@preheader)=%% </div>
+  <!-- Insert &zwnj;&nbsp; hack after hidden preview text -->
+  <div style="display: none; max-height: 0px; overflow: hidden;"> &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp; </div>
+  <custom name="opencounter" type="tracking" />
+  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f5f5f5">
+    <tr>
+      <td align="center" valign="top">
+        <table role="presentation" width="600" border="0" cellspacing="0" cellpadding="0" class="mobile-shell" bgcolor="%%=v(@headerBackgroundColor)=%%" style="width: 600px;">
+          <!-- Header -->
+          <tr>
+            <td>
+              <table role="presentation" class="" width="100%" cellspacing="0" cellpadding="10" border="0" bgcolor="#f5f5f5">
+                <tr>
+                  <td class="preheaderText" style="font-family: 'Roboto', sans-serif; font-weight: normal; font-size:14px; line-height:18px; padding:15px 0px 10px 0px;"><a href="#" target="_blank" style="color:#a4acae; text-decoration:none;">Ex sapien vitae pellentesque sem placerat in id.</a></td>
+                  <td class="preheaderText hidden" style="font-family: 'Roboto', sans-serif; font-weight: normal;   font-size:14px; line-height:18px; padding:15px 0px 10px 0px;" align="right"><a href="%%view_online%%" target="_blank" style="color:#a4acae; text-decoration:underline;">View in web browser</a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table role="presentation" style="" class="" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#D5E9E4">
+                <tr>
+                  <td class="logoIconTd" style="padding: 0px 0px 0px 30px;" width="173" height="69"> <a href="#" target="_blank"><svg width="30" height="40" viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 0L20.4545 5.33333L0 25.3333V14.6667L15 0Z" fill="#06D1D4"></path>
+<path d="M2.90827 28.177L15 40L30 25.3334V14.6667L20.4545 5.33337L0 25.3334L0.0041688 25.3375L20.4545 5.33337V20.6667L11.25 29.6667V20.1324L2.90827 28.177Z" fill="#3628A0"></path>
+</svg></a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- END Header -->
+          <!-- HEROB -->
+          <tr>
+            <td style="" bgcolor="#D5E9E4">
+              <table role="presentation" bgcolor="#D5E9E4" width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td bgcolor="#D5E9E4">
+                    <!--[if !mso]><!-->
+                    <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;">
+                      <a href="%%=RedirectTo(@HeroImageLink)=%%" target="_blank">
+                        <img src="https://placehold.co/414x300@2x.png" border="0" style="display: block; width: 100%;" align="bottom" alt="Placeholder image for mobile hero" />
+                      </a>
+                    </div>
+                    <!-- <![endif]-->
+                    <div class="no-mobile">
+                      <a href="%%=RedirectTo(@HeroImageLink)=%%" target="_blank">
+                        <img src="https://placehold.co/600x400@2x.png" border="0" width="600" height="auto" style="display: block; width: 600px; height:auto;border: none;" 
+                        align="top" alt="Placeholder image for desktop hero" />
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <!--  Sub Head -->
+                <tr>
+                  <td bgcolor="#C5DBD8" class="hero-title-1" style="padding: 50px 78px 0px 78px;">
+                    <h1 class="hero-title-1-text" style="margin: 0px; color:#000000; font-family: 'Roboto', sans-serif; font-weight: bold; font-size:40px; line-height:45px; text-align:center; letter-spacing: .2px;">Headline</h1>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#C5DBD8" class="hero-title-2" style="padding: 15px 78px 0px 78px;">
+                    <h2 class="hero-title-2-text" style="margin: 0px; color:#000000; font-family: 'Roboto', sans-serif; font-weight: normal; font-size:18px; line-height:28px;text-align:center;">Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&sup1;</h2>
+                  </td>
+                </tr>
+                <!-- END Intro -->
+                <!-- Button -->
+                <tr>
+                  <td bgcolor="#C5DBD8" align="center" style=" padding: 30px 78px 60px 78px;">
+                    <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="left" class="mob-btn-CTA" style="border-radius: 2px; padding: 11px 43px;" bgcolor="#23737C">
+                          <a href="%%=RedirectTo(@HeroCTALink)=%%" target="_blank" style="font-size: 18px; line-height: 22px; font-family: 'Roboto', sans-serif; font-weight: bold; color: #ffffff; text-decoration: none; text-decoration: none;border-radius: 2px; display: inline-block; ">CTA<a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Module 1st Content B1/B2 Mobile -->
+          <!--[if !mso]><!-->
+          <tr>
+            <td bgcolor="#99BCBA" style="background-color: #99BCBA;" class="">
+              <table role="presentation" class="mobile-only" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#99BCBA" style="display: none;">
+                <tr>
+                  <td style="padding: 45px 50px 0px 50px; border: none; color: #1D1A15 !important; text-align: center;" valign="top">
+                    <h2 style=" font-family: 'Roboto', sans-serif; font-weight: bold; margin-top: 60px; color: #000000; font-size: 26px; line-height: 34px; letter-spacing: 0.13px; text-align: center; margin:0px;">Lorem ipsum dolor sit amet</h2>
+                    <p style="color: #000000; font-size:18px; font-weight: normal ; margin: 20px 0px 0px 0px; line-height: 28px; font-family: 'Roboto', sans-serif; font-weight: normal; margin-bottom: 0px; margin-top: 20px; text-align: center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&sup2;</p>
+                    <p style="padding-left: 0px !important; font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 18px; color: #00B0B9;margin-top: 20px;  margin-bottom: 45px; letter-spacing: .01em;line-height: 22px;">
+                      <a href="%%=RedirectTo(@BannerCTALink)=%%" target="_blank" style="color:#000000; text-decoration:none;">
+                        <strong style="color: #000000; font-family: 'Roboto', sans-serif; font-weight: bold; letter-spacing: 0.18px; font-size: 18px; line-height: 22px; padding-right: 5px;">CTA 2&nbsp;&#10132;</strong>
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <a href="%%=RedirectTo(@BannerImageLink)=%%" target="_blank">
+                      <img src="https://placehold.co/300x200@2x.png" alt="Placeholder image with gray background" border="0" width="100%" height="auto" style="width: 100%;height: auto; display: block;" />
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- <![endif]-->
+          <!--END Module 1st Content B1/B2 Mobile -->
+          <!--Module 2nd Content B2 Desktop-->
+          <tr>
+            <td class="no-mobile" bgcolor="#99BCBA" style="padding-top: 0px;">
+              <table role="presentation" class="no-mobile" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#99BCBA">
+                <tr>
+                  <td width="300" bgcolor="" valign="bottom">
+                    <a href="%%=RedirectTo(@BannerImageLink)=%%" target="_blank">
+                      <img src="https://placehold.co/300x400@2x.png" alt="Placeholder image with gray background" border="0" width="300" height="auto" style="width: 300px;height: auto; display: block; vertical-align: bottom;" />
+                    </a>
+                  </td>
+                  <td style="padding: 0px 45px 0px 30px; color: #000000; font-size: 28px; line-height: 36px; font-family: 'Roboto', sans-serif; font-weight: bold; text-align: left; ">
+                    <h2 style="color: #000000; font-size: 28px; line-height: 36px; font-family: 'Roboto', sans-serif; font-weight: bold; text-align: left; margin-top: 0px; margin-bottom: 0px; letter-spacing: .14px;">Lorem ipsum dolor sit amet</h2>
+                    <p style="color: #000000; font-family: 'Roboto', sans-serif; font-weight: normal; font-size: 18px; line-height: 28px; margin-bottom: 0px; margin-top: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&sup2;</p>
+                    <p style="padding-left: 0px !important; font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 18px; color: #00B0B9;margin-top: 20px;  margin-bottom: 0px; letter-spacing: .01em;line-height: 22px;">
+                      <a href="%%=RedirectTo(@BannerCTALink)=%%" target="_blank" style="color:#000000; text-decoration:none;">
+                        <strong style="color: #000000; font-family: 'Roboto', sans-serif; font-weight: bold; letter-spacing: 0.18px; font-size: 18px; padding-right: 5px; line-height: 22px;">CTA 2&nbsp;&#10132;</strong>
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center">
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                <tr>
+                  <td class="title10" style="padding: 35px 78px 35px 78px; color:#5F6368; font-family: 'Roboto', sans-serif; font-weight: normal; font-size:12px; line-height: 18px; text-align:left;">&sup1;Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean.<br>&sup2;Lorem ipsum dolor sit amet consectetur adipiscing elit. Placerat in id cursus mi pretium tellus duis. Urna tempor pulvinar vivamus fringilla lacus nec metus. Integer nunc posuere ut hendrerit semper vel class. Conubia nostra inceptos himenaeos orci varius natoque penatibus. Mus donec rhoncus eros lobortis nulla molestie mattis. Purus est efficitur laoreet mauris pharetra vestibulum fusce. Sodales consequat magna ante condimentum neque at luctus. Ligula congue sollicitudin erat viverra ac tincidunt nam. Lectus commodo augue arcu dignissim velit aliquam imperdiet. Cras eleifend turpis fames primis vulputate ornare sagittis. Libero feugiat tristique accumsan maecenas potenti ultricies habitant. Cubilia curae hac habitasse platea dictumst lorem ipsum. Faucibus ex sapien vitae pellentesque sem placerat in. Tempus leo eu aenean sed diam urna tempor.</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center">
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FAFAFA">
+                <tr>
+                  <td class="title11" style="padding: 35px 78px 35px 78px; color:#939C9E; font-family: 'Roboto', sans-serif; font-weight: normal; font-size:12px; line-height: 18px; text-align:left;">Senectus netus suscipit auctor curabitur facilisi cubilia curae.<br><br>
+                    <strong>&copy; Company  Name, Street,<br> City, State Zip, United States</strong>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- END Footer -->
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
