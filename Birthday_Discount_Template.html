@@ -5,6 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
     <style type="text/css">
       /* CLIENT-SPECIFIC STYLES */
       body,
@@ -101,7 +103,7 @@
 
       /* Universal Link Styles */
       a {
-        color: #229efd;
+        color: #727272;
         font-weight: bold;
       }
       a:hover {
@@ -112,21 +114,10 @@
         background-color: #fd6350 !important;
       }
 
-      /* Responsive styles */
-      @media screen and (max-width: 600px) {
-        h1 {
-          font-size: 24px !important;
-        }
-
-        /* Hide labels and display content by default on mobile */
-        label {
-          display: none !important;
-        }
-        .slide {
-          display: block !important;
-          max-width: 600px !important;
-          width: 100% !important;
-        }
+      .footer-link {
+        color: #727272 !important;
+        text-decoration: none !important;
+        font-family: "Moderat-Bold", sans-serif !important;
       }
 
       /* Two column layout */
@@ -139,7 +130,6 @@
 
       /* Interactivity */
 
-      /* Hide inputs */
       input {
         display: none;
       }
@@ -158,14 +148,14 @@
         border: 2px solid #3f386b !important;
       }
 
-      /* Button hover */
-      a.button:hover {
-        background-color: #3f386b !important;
-      }
-
       /* Hide slides */
       .slide {
         display: none;
+      }
+
+      /* Button hover */
+      a.button:hover {
+        background-color: #3f386b !important;
       }
 
       /* Show checked slide */
@@ -181,7 +171,58 @@
         border: 2px solid red !important;
       }
 
+      /* Dark Mode Support  */
+      @media (prefers-color-scheme: dark) {
+        .dark-mode-bg {
+          background-color: #4b4f56 !important;
+        }
+        .dark-mode-text {
+          color: #ffffff !important;
+        }
+        .dark-mode-bg-slide {
+          background-color: #ffffff !important;
+        }
+        .dark-mode-slide-text {
+          color: #4b4f56 !important;
+        }
+        .dark-mode-footer-text {
+          color: #ffffff !important;
+        }
+      }
+
+      /* Outlook Specific Dark Mode Support */
+      @media (prefers-color-scheme: dark) {
+        [data-ogsb] .dark-mode-bg {
+          background-color: #4b4f56 !important;
+        }
+        [data-ogsc] .dark-mode-text {
+          color: #ffffff !important;
+        }
+        [data-ogsb] .dark-mode-bg-slide {
+          background-color: #ffffff !important;
+        }
+        [data-ogsc] .dark-mode-slide-text {
+          color: #4b4f56 !important;
+        }
+        [data-ogsc] .dark-mode-footer-text {
+          color: #ffffff !important;
+        }
+      }
+
+      /* Responsive styles */
       @media screen and (max-width: 600px) {
+        h1 {
+          font-size: 24px !important;
+        }
+        label {
+          display: none !important;
+        }
+        .slide {
+          display: block !important;
+          max-width: 600px !important;
+          width: 100% !important;
+        }
+
         .two-col .column {
           max-width: 100% !important;
           width: 100% !important;
@@ -202,6 +243,13 @@
     <div style="display: none; max-height: 0; overflow: hidden">
       20% off your next purchase. Use code: 20OFF
     </div>
+    <!-- Preheader text hack to prevent rendering unnecessary text -->
+    <div style="display: none; max-height: 0px; overflow: hidden">
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+      &#847; &zwnj; &nbsp; &#8199; &shy; &#847; &zwnj; &nbsp; &#8199; &shy;
+    </div>
 
     <!--[if (gte mso 9)|(IE)]>
 		<table cellspacing="0" cellpadding="0" border="0" width="600" align="center" role="presentation"><tr><td>
@@ -218,6 +266,7 @@
         max-width: 600px;
         padding: 40px 20px 40px 20px;
       "
+      class="dark-mode-bg dark-mode-text"
     >
       <!-- Logo image -->
       <center>
@@ -262,7 +311,10 @@
       <input type="radio" name="slides" id="lorimer" />
       <input type="radio" name="slides" id="kellensoo" />
 
-      <div style="margin-bottom: 20px; text-align: center">
+      <div
+        style="margin-bottom: 20px; text-align: center"
+        class="dark-mode-bg dark-mode-text mso-hide: all;"
+      >
         <label
           class="slide-label1"
           for="ainslie"
@@ -308,18 +360,17 @@
           >Kellensoo</label
         >
       </div>
-
       <!-- Slide 1 -->
-      <div
-        class="slide ainslie"
-        style="background-color: #4b4f56; padding: 20px"
-      >
+      <div class="slide ainslie">
         <tr>
           <td>
             <table role="presentation" width="100%" max-width="600px">
               <tr>
                 <!-- Two Col Layout -->
-                <td class="two-col">
+                <td
+                  class="two-col dark-mode-bg-slide"
+                  style="background-color: #4b4f56; padding: 20px"
+                >
                   <!-- Image Col -->
                   <table role="presentation" width="49%" class="column">
                     <tr>
@@ -343,6 +394,7 @@
                             font-size: 24px;
                             color: #fff;
                           "
+                          class="dark-mode-slide-text"
                         >
                           Ainslie
                         </h2>
@@ -354,6 +406,7 @@
                             color: #fff;
                             line-height: 20px;
                           "
+                          class="dark-mode-slide-text"
                         >
                           Our lightest and most delicate blend is perfect for
                           those looking for a brighter, more subtle cup of
@@ -372,7 +425,9 @@
                           <span style="text-decoration: line-through"
                             >$17.00</span
                           >
-                          <span style="text-decoration: none; color: #fff"
+                          <span
+                            style="text-decoration: none; color: #fff"
+                            class="dark-mode-slide-text"
                             >| $13.60 (20% off)</span
                           >
                         </p>
@@ -417,7 +472,7 @@
 
       <!-- Slide 2 -->
       <div
-        class="slide santateresa"
+        class="slide santateresa dark-mode-bg-slide dark-mode-slide-text"
         style="background-color: #4b4f56; padding: 20px"
       >
         <tr>
@@ -425,7 +480,10 @@
             <table role="presentation" width="100%" max-width="600px">
               <tr>
                 <!-- Two Col Layout -->
-                <td class="two-col">
+                <td
+                  class="two-col dark-mode-bg-slide"
+                  style="background-color: #4b4f56; padding: 20px"
+                >
                   <!-- Image Col -->
                   <table role="presentation" width="49%" class="column">
                     <tr>
@@ -450,6 +508,7 @@
                             font-size: 24px;
                             color: #fff;
                           "
+                          class="dark-mode-slide-text"
                         >
                           Santa Teresa
                         </h2>
@@ -461,6 +520,7 @@
                             color: #fff;
                             line-height: 20px;
                           "
+                          class="dark-mode-slide-text"
                         >
                           The producer of Santa Teresa, Jorge Lagos, uses the
                           lush rainforest microclimate to his advantage in
@@ -475,6 +535,7 @@
                             color: #fff;
                             line-height: 20px;
                           "
+                          class="dark-mode-slide-text"
                         >
                           This year’s crop in particular has benefited from a
                           perfect balance of rain and sunshine, resulting in a
@@ -492,7 +553,9 @@
                           <span style="text-decoration: line-through"
                             >$19.00</span
                           >
-                          <span style="text-decoration: none; color: #fff"
+                          <span
+                            style="text-decoration: none; color: #fff"
+                            class="dark-mode-slide-text"
                             >| $15.20 (20% off)</span
                           >
                         </p>
@@ -536,7 +599,7 @@
 
       <!-- Slide 3 -->
       <div
-        class="slide lorimer"
+        class="slide lorimer dark-mode-bg-slide dark-mode-slide-text"
         style="background-color: #4b4f56; padding: 20px"
       >
         <tr>
@@ -544,7 +607,10 @@
             <table role="presentation" width="100%" max-width="600px">
               <tr>
                 <!-- Two Col Layout -->
-                <td class="two-col">
+                <td
+                  class="two-col dark-mode-bg-slide"
+                  style="background-color: #4b4f56; padding: 20px"
+                >
                   <!-- Image Col -->
                   <table role="presentation" width="49%" class="column">
                     <tr>
@@ -569,6 +635,7 @@
                             font-size: 24px;
                             color: #fff;
                           "
+                          class="dark-mode-slide-text"
                         >
                           Lorimer
                         </h2>
@@ -580,6 +647,7 @@
                             color: #fff;
                             line-height: 20px;
                           "
+                          class="dark-mode-slide-text"
                         >
                           Lorimer is right for you if you like a strong, bold
                           dark roast. The buttery, chocolatey notes of the blend
@@ -598,7 +666,9 @@
                           <span style="text-decoration: line-through"
                             >$17.00</span
                           >
-                          <span style="text-decoration: none; color: #fff"
+                          <span
+                            style="text-decoration: none; color: #fff"
+                            class="dark-mode-slide-text"
                             >| $13.60 (20% off)</span
                           >
                         </p>
@@ -642,7 +712,7 @@
 
       <!-- Slide 4 -->
       <div
-        class="slide kellensoo"
+        class="slide kellensoo dark-mode-bg-slide dark-mode-slide-text"
         style="background-color: #4b4f56; padding: 20px"
       >
         <tr>
@@ -650,7 +720,10 @@
             <table role="presentation" width="100%" max-width="600px">
               <tr>
                 <!-- Two Col Layout -->
-                <td class="two-col">
+                <td
+                  class="two-col dark-mode-bg-slide"
+                  style="background-color: #4b4f56; padding: 20px"
+                >
                   <!-- Image Col -->
                   <table role="presentation" width="49%" class="column">
                     <tr>
@@ -675,11 +748,11 @@
                             font-size: 24px;
                             color: #fff;
                           "
+                          class="dark-mode-slide-text"
                         >
                           Kellensoo
                         </h2>
                         <p
-                          class="coffee-description"
                           style="
                             font-family: 'Moderat-Regular', sans-serif;
                             font-size: 14px;
@@ -687,6 +760,7 @@
                             color: #fff;
                             line-height: 20px;
                           "
+                          class="dark-mode-slide-text"
                         >
                           Grown at high altitude in nutrient-rich soil, this
                           coffee boasts a floral flavor profile that will hook
@@ -708,7 +782,9 @@
                           <span style="text-decoration: line-through"
                             >$19.00</span
                           >
-                          <span style="text-decoration: none; color: #fff"
+                          <span
+                            style="text-decoration: none; color: #fff"
+                            class="dark-mode-slide-text"
                             >| $15.20 (20% off)</span
                           >
                         </p>
@@ -750,15 +826,28 @@
         </tr>
       </div>
 
-      <!-- Footer information. Always include an unsubscribe link! -->
-      <div style="color: #888888; font-size: 16px; margin: 2em 0 0 0">
-        <p style="margin: 0 0 20px 0">
-          You're receiving this email because you're trying to make email better
-          for everyone. Good on you! Don't worry,
-          <a href="#">you can unsubscribe here</a> if you'd like.
-        </p>
-        <p style="margin: 0 0 20px 0">
-          Email Sender - 48372 Murphy St., Someplace, MI 93827
+      <!-- Footer -->
+      <div
+        style="
+          color: #727272;
+          font-size: 16px;
+          margin: 30px 0 0 0;
+          text-align: center;
+          line-height: normal;
+          font-family: 'Moderat-Regular', sans-serif;
+        "
+        class="dark-mode-footer-text"
+      >
+        <p style="margin: 0 0 0 0">THINK COFFEE</p>
+        <p style="margin: 0 0 0 0">10 Devoe St, Brooklyn, NY, 11211</p>
+        <p style="margin: 10px 0 10px 0">
+          <a href="#" target="_blank" class="footer-link dark-mode-footer-text"
+            >Unsubscribe</a
+          >
+          or
+          <a href="#" target="_blank" class="footer-link dark-mode-footer-text"
+            >Manage Preferences</a
+          >
         </p>
       </div>
     </div>
